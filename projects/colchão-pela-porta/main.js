@@ -2,7 +2,7 @@ function main() {
     const lookup = [0, 2, 0, 4, 2, 4];
 
     // Conseguindo as variaveis
-    var inputs = document.getElementById("input").value.match(/\D|\d+\.\d|\d+/g);
+    var inputs = document.getElementById("input").value.match(/\D|\d+\.\d+|\d+/g);
 
     // Verificar erros
     if (inputs.length !== 9 || inputs[5] !== "\n") {
