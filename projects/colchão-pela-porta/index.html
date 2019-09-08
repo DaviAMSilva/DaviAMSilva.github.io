@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Passando um colchão pela porta</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <div id="torso">
+        <h1>Passando um colchão pela porta</h1>
+
+        <div id="panel">
+
+            <p>Dimensões do colchão e da porta:</p>
+            <textarea type="text" id="input" rows="2">2 1 0.2
+2 0.8</textarea>
+            <p>Resultado:</p>
+            <textarea type="text" id="output" rows="2" readonly></textarea>
+
+            <br>
+
+            <button id="send" onmouseup="main();">Testar</button>
+
+            <br>
+
+            <p>Código:</p>
+            <textarea id="code" rows="27" readonly>function main() {
+const lookup = [0, 2, 0, 4, 2, 4];
+
+// Conseguindo as variaveis
+var inputs = document.getElementById("input").value.match(/\D|\d+\.\d|\d+/g);
+
+// Verificar erros
+if (inputs.length !== 9 || inputs[5] !== "\n") {
+    alert("Por favor insira os valores corretamente:\n\nN N N\nN N");
+    return;
+}
+
+doorMax = Math.max(inputs[6], inputs[8]);
+doorMin = Math.min(inputs[6], inputs[8]);
+
+for (var i = 0; i < 6; i += 2) {
+    if (Math.min(inputs[lookup[i]], inputs[lookup[i + 1]]) <= doorMin &&
+        Math.max(inputs[lookup[i]], inputs[lookup[i + 1]]) <= doorMax) {
+            // Enviando o resultado
+            document.getElementById("output").value="S";
+            return;
+    };
+}
+
+// Enviando o resultado
+document.getElementById("output").value="N";
+}</textarea>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
