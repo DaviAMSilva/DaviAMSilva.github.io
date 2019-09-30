@@ -61,7 +61,7 @@ function main() {
 
     if (!avisado && lados >= 10) {
         alert("⚠ ATENÇÃO! Números maiores que 10 poderão travar permanentemente o seu navegador. Continue ao seu proprio risco...");
-        alertado = true;
+        avisado = true;
         return;
     }
 
