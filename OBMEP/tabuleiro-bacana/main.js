@@ -5,6 +5,7 @@ var lookup = [
     { x: +0, y: -1 },
     { x: +1, y: -1 }
 ];
+var avisado = false;
 
 function listarVizinhos(arr, n) {
     var lista = [];
@@ -57,6 +58,12 @@ function casos(arr, letra, n) {
 function main() {
     // Conseguir a variavel
     lados = parseInt(document.getElementById("input").value);
+
+    if (!avisado && lados >= 10) {
+        alert("⚠ ATENÇÃO! Números maiores que 10 poderão travar permanentemente o seu navegador. Continue ao seu proprio risco...");
+        alertado = true;
+        return;
+    }
 
     var arr = [];
     for (var i = 0; i < lados; i++) {
