@@ -1,0 +1,94 @@
+#torso {
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(172, 205, 255);
+    border-color: cornflowerblue;
+    border-style: ridge;
+    border-width: 10px;
+    border-radius: 5px;
+
+    overflow: auto;
+}
+
+#code {
+    font-size: 17px;
+    padding: 10px;
+}
+
+#criptografar {
+    display:block;
+    float:left;
+}
+#descriptografar {
+    display:block;
+    float:right;
+}
+
+#output {
+    background-color: rgb(230, 230, 230);
+}
+
+textarea {
+    resize:none;
+
+    display: block;
+    width: 95%;
+    height: fit-content;
+    margin: auto;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+
+    border: 3px lightskyblue;
+    border-style: double;
+}
+
+body {
+    background-repeat: repeat;
+    background-image: url("images/blue-tile.jpg");
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+input {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+code {
+    overflow: auto;
+}
+
+.send {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+
+    font-size: 30px;
+
+    background-color: whitesmoke;
+}
+.send:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 10px 0 rgba(0,0,0,0.19);
+}
+.send:active {
+    background-color: lightgray;
+}

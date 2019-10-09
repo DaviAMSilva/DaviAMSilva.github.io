@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Criptografia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <div id="torso">
+        <h1>Criptografia</h1>
+
+        <div id="panel">
+
+            <input type="checkbox" id="permitirNumeros" onmouseup="atualizarPN()">Permitir números?</input>
+
+            <p>Insira a mensagem:</p>
+            <textarea type="text" id="input" rows="2">ABCD</textarea>
+            <p>Resultado:</p>
+            <textarea type="text" id="output" rows="2" readonly></textarea>
+
+            <br>
+
+            <button class="send" id="criptografar" onmouseup="criptografar();">Criptografar</button>
+            <button class="send" id="descriptografar" onmouseup="descriptografar();">Descriptografar</button>
+
+            <br>
+
+            <p>Código:</p>
+            <pre><code class="javascript" id="code"></code></pre>
+            <script>
+                fetch('main.js')
+                    .then(response => response.text())
+                    .then((data) => {
+                        document.getElementById("code").innerText = data;
+                        hljs.initHighlighting();
+                    })
+            </script>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
