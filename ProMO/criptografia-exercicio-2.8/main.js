@@ -5,7 +5,6 @@ function main() {
 
     if (/[^ABEP]/.test(inicial)) {
         alert("⚠ ATENÇÃO! Insira apenas os caracteres: A, B, E ou P (repetições são permitidas)");
-        avisado = true;
         return;
     }
 

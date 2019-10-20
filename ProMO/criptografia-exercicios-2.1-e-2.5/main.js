@@ -10,7 +10,6 @@ function criptografar() {
 
     if (input === null) {
         alert("⚠ ATENÇÃO! Insira apenas os caracteres A, B, C ou D (repetições são permitidas)");
-        avisado = true;
         return;
     } else {
         input = input[0];
