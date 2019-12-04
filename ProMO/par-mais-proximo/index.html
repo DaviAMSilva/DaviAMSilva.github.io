@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Par mais Próximo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <script src='p5.js'></script>
+    <script src='algorithm.js'></script>
+    <script src='main.js'></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <div id="torso">
+        <div id="panel-container-container" class="body-panel">
+            <div id="panel-container">
+                <h1>Algoritmo do par mais próximo, usando a estratégia<br>"Dividir e Conquistar" recursiva</h1>
+
+                <div id="panel">
+
+                    <p>Insira o número de pontos:</p>
+
+                    <textarea type="number" id="input" rows="2"
+                        placeholder="Atenção! Um número grande poderá travar seu navegador." onkeypress="return ((evt)=>{var charCode = (evt.which) ? evt.which : event.keyCode;
+                            return !(charCode > 31 && (charCode < 48 || charCode > 57))
+                            })(event)"></textarea>
+                    <script>
+                        document.addEventListener("keydown", (e) => {
+                            if (e.keyCode === 13) {
+                                e.preventDefault();
+                                sendTest();
+                            }
+                        });
+                    </script>
+
+                    <br><br><br><br><br>
+
+                    <p>Resultado:</p>
+                    <textarea type="text" id="output" rows="2" readonly></textarea>
+
+                    <br><br><br><br><br>
+
+                    <button id="send"
+                        onmouseup="sendTest();">Calcular</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container" class="body-panel"></div>
+
+        <div id="code-container-container" class="body-panel">
+            <div id="code-container">
+                <p>Algoritmo:</p>
+                <pre><code class="javascript" id="code"></code></pre>
+                <script>
+                    fetch('algorithm.js')
+                        .then(response => response.text())
+                        .then((data) => {
+                            document.getElementById("code").innerText = data;
+                            hljs.initHighlighting();
+                        })
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
