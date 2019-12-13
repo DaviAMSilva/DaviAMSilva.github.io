@@ -6,7 +6,7 @@ function atualizarPN() {
 
 function criptografar() {
     // Conseguindo as variaveis
-    var input = document.getElementById("input").value.match(/[ABCD]+/, "");
+    var input = document.getElementById("input").value.toUpperCase().match(/[ABCD]+/, "");
 
     if (input === null) {
         alert("⚠ ATENÇÃO! Insira apenas os caracteres A, B, C ou D (repetições são permitidas)");
@@ -42,7 +42,7 @@ function criptografar() {
 
 function descriptografar() {
     // Conseguindo as variaveis
-    var input = document.getElementById("input").value.match(/[KXRU1234]+/, "");
+    var input = document.getElementById("input").value.toUpperCase().match(/[KXRU1234]+/, "");
 
     if (input === null) {
         alert("⚠ ATENÇÃO! Insira apenas os caracteres K, X, R, U, 1, 2, 3 ou 4 (repetições são permitidas)");

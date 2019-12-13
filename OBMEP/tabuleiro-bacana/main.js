@@ -20,11 +20,7 @@ function listarVizinhos(arr, n) {
 }
 
 function clonarArray(arr) {
-    var arrR = [];
-    for (var i in arr) {
-        arrR[i] = [...arr[i]];
-    }
-    return arrR;
+    return [...arr];
 }
 
 function casos(arr, letra, n) {

@@ -47,6 +47,7 @@ textarea {
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
+    text-transform: uppercase;
 
     border: 3px lightskyblue;
     border-style: double;

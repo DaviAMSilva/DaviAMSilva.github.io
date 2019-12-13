@@ -4,11 +4,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Passando um colchão pela porta</title>
+    <title>Criptografia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='colchão-pela-porta/main.css'>
+    <script src='colchão-pela-porta/main.js'></script>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -21,7 +21,7 @@
 
         <div id="panel">
 
-            <p>Dimensões do colchão e da porta:</p>
+            <p>Dimensões do colchão e da porta, respectivamente:</p>
             <textarea type="text" id="input" rows="2">2 1 0.2
 2 0.8</textarea>
             <p>Resultado:</p>
@@ -36,7 +36,7 @@
             <p>Código:</p>
             <pre><code class="javascript" id="code"></code></pre>
             <script>
-                fetch('main.js')
+                fetch('colchão-pela-porta/main.js')
                     .then(response => response.text())
                     .then((data) => {
                         document.getElementById("code").innerText = data;
