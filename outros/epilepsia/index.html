@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>EPILEPSIA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            noStroke();
+        }
+        function draw() {
+            // for (let i = 0; i < width; i++) {
+            //     for (let j = 0; j < height; j++) {
+            //         set(i, j, color(random(255),random(255),random(255)));
+            //     }
+            // }
+            // updatePixels();
+
+            for (let i = 0; i < width / 10; i++) {
+                for (let j = 0; j < height / 10; j++) {
+                    fill(random(255),random(255),random(255));
+                    square(i * 10, j * 10, 1 * 10);
+                }
+            }
+        }
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+    <script src='p5.js'></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden;">
+</body>
+
+</html>
