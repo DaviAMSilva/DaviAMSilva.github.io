@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>DaviAMSilva.github.io</title>
+    <title>DaviAMSilva</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <script src="https://kit.fontawesome.com/dc895b055f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="Fira_Code_v6.2/fira_code.css">
+
     <style>
+        * {
+            font-family: "Fira Code", "Roboto", sans-serif;
+        }
+        
         .star-icon::before {
             content: '\1F31F';
             margin-left: -20px;
@@ -16,7 +25,19 @@
 
         .topic {
             font-weight: bolder;
-            /* padding-top: 1em; */
+        }
+
+        .pointer {
+            color: red;
+        }
+
+        #title {
+            height: 100px;
+            cursor: pointer;
+        }
+
+        #title * {
+            height: 0px !important;
         }
 
         a {
@@ -35,12 +56,19 @@
             list-style-type: none;
         }
     </style>
-    
+
 </head>
 
 <body>
-    <h1>ÍNDICE</h1>
-    <h5 class="topic"><i>(Otimizado para monitor 1920×1080)</i></h5>
+    <h1 id="title">Davi<span class="title-animation"> </span>A<span class="title-animation">ugusto </span>M<span
+            class="title-animation">oreira da </span>Silva <span class="pointer"><i class="fa-solid fa-hand-pointer"></i></span></h1>
+    <h5 class="topic">
+        <em>(Otimizado para monitor 1920×1080)</em>
+        <br>
+        <em>Um site melhor irá ser desenvolvido no futuro quando eu tiver mais tempo disponível</em>
+    </h5>
+
+    <br>
 
     <p class="topic">PROJETOS</p>
     <ul>
@@ -64,6 +92,8 @@
         <li><a href="https://github.com/DaviAMSilva/PI-Copa">Projeto Integrador I - Simulador de Copa</a></li>
         <li class="star-icon"><a href="https://github.com/DaviAMSilva/PI2-GBA">Projeto Integrador II - Jogo para a
                 plataforma Game Boy Advance</a></li>
+        <li class="star-icon"><a href="https://github.com/codinStruct/codinStruct-content">Projeto Integrador IV -
+                codinStruct</a> | <a href="http://codinstruct-pi4.herokuapp.com/">Site</a></li>
     </ul>
 
     <p class="topic">BIBLIOTECAS</p>
@@ -90,7 +120,15 @@
     <br>
 
     <p class="topic">CONTATO:</p>
-    <a href="https://www.linkedin.com/in/davi-augusto-moreira-da-silva-19a0761a4/">LinkedIn</a> | <a href="https://github.com/DaviAMSilva">Github</a>
+    <a href="https://www.linkedin.com/in/davi-augusto-moreira-da-silva-19a0761a4/">LinkedIn</a> | <a
+        href="https://github.com/DaviAMSilva">Github</a>
+
+    <script>
+        $("#title").click(function () {
+            $('.title-animation').toggle(500);
+            $('.pointer').hide();
+        });
+    </script>
 </body>
 
 </html>
